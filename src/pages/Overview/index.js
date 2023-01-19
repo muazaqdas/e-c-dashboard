@@ -158,8 +158,8 @@ const OverviewPage = () => {
           </div>
         </aside>
         <div className="bg-gray_50 flex flex-col items-center justify-start p-[30px] md:pl-[20px] sm:pl-[20px] md:pr-[20px] sm:pr-[20px] sm:px-[20px] md:w-[100%] sm:w-[100%] w-[83%]">
-          <header className="flex items-center justify-center w-[100%]">
-            <div className="flex md:flex-col flex-row md:gap-[20px] items-center justify-center w-[100%]">
+          <header className="flex items-center justify-right w-[100%]">
+            <div className="flex md:flex-col flex-row md:gap-[20px] items-center w-[100%]">
               <div className="header-row mt-[6px] mb-[10px]">
                 <Text
                   className="text-bluegray_900 text-left tracking-ls030000001192092896 md:tracking-ls1 sm:tracking-ls1"
@@ -176,21 +176,17 @@ const OverviewPage = () => {
               </div>
               <Img
                 src="images/img_search.svg"
-                className="h-[16px] sm:hidden md:ml-[0] ml-[723px] object-cover w-[16px]"
+                className="h-[16px] sm:hidden md:ml-[0] ml-[50rem] object-cover w-[16px]"
                 alt="search"
               />
               <Img
                 src="images/img_notification.svg"
-                className="h-[16px] sm:hidden md:ml-[0] ml-[24px] object-cover w-[16px]"
+                className="h-[16px] sm:hidden md:ml-[0] ml-[24px] right-0 object-cover w-[16px]"
                 alt="notification"
               />
-              <Img
-                src="images/img_dividerline.svg"
-                className="h-[32px] sm:hidden md:ml-[0] ml-[32px] object-cover w-[auto]"
-                alt="dividerline One"
-              />
+              
               <Text
-                className="font-semibold sm:hidden md:ml-[0] ml-[32px] text-bluegray_900 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
+                className=" mr-0 right-0 font-semibold sm:hidden md:ml-[0] ml-[32px] text-bluegray_900 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
                 as="h5"
                 variant="h5"
               >

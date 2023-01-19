@@ -165,7 +165,7 @@ const CustomersDetailswithPrPage = () => {
               </div>
               <Img
                 src="images/img_search.svg"
-                className="h-[16px] sm:hidden md:ml-[0] ml-[752px] object-cover w-[16px]"
+                className="h-[16px] sm:hidden md:ml-[0] ml-[55rem] object-cover w-[16px]"
                 alt="search"
               />
               <Img
@@ -173,11 +173,7 @@ const CustomersDetailswithPrPage = () => {
                 className="h-[16px] sm:hidden md:ml-[0] ml-[24px] object-cover w-[16px]"
                 alt="notification"
               />
-              <Img
-                src="images/img_dividerline.svg"
-                className="h-[32px] sm:hidden md:ml-[0] ml-[32px] object-cover w-[auto]"
-                alt="dividerline One"
-              />
+              
               <Text
                 className="font-semibold sm:hidden md:ml-[0] ml-[32px] text-bluegray_900 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
                 as="h5"
