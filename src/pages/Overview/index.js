@@ -296,10 +296,8 @@ const OverviewPage = () => {
               </div>
             </div>
           </div>
-          <div
-            className="bg-cover bg-no-repeat flex flex-col items-center justify-start mt-[30px] sm:pl-[20px] pl-[32px] md:w-[100%] sm:w-[100%] w-[98%]"
-            style={{ backgroundImage: "url('images/img_unresolved.svg')" }}
-          >
+          <div className="bg-cover bg-no-repeat flex flex-col p-[2rem] items-center justify-start mt-[100px] sm:pl-[20px] pl-[32px] md:w-[100%] sm:w-[100%] w-[98%]"
+            style={{ backgroundImage: "url('images/img_unresolved.svg')" }}>
             <div className="flex md:flex-col sm:flex-col flex-row md:gap-[32px] sm:gap-[32px] items-center justify-between w-[100%]">
               <div className="flex flex-col gap-[54px] items-start justify-start md:w-[100%] sm:w-[100%] w-[66%]">
                 <div className="flex flex-col gap-[8px] items-start justify-start w-[100%]">
@@ -594,11 +592,7 @@ const OverviewPage = () => {
               </div>
               <div className="flex flex-col items-center justify-start md:w-[100%] sm:w-[100%] w-[32%]">
                 <div className="flex flex-row items-center justify-evenly w-[100%]">
-                  <Img
-                    src="images/img_dividerline.svg"
-                    className="h-[546px] object-cover w-[auto]"
-                    alt="dividerline Two"
-                  />
+                  
                   <div className="flex flex-col gap-[24px] items-center justify-start w-[100%]">
                     <div className="flex flex-col gap-[8px] items-center justify-start md:w-[100%] sm:w-[100%] w-[21%]">
                       <Text
@@ -638,8 +632,8 @@ const OverviewPage = () => {
                       </Text>
                       <Img
                         src="images/img_dividerline.svg"
-                        className="h-[1px] mt-[24px] object-cover w-[auto]"
-                        alt="dividerline Four"
+                        className="h-[1px] object-cover w-[auto]"
+                        alt="dividerline Three"
                       />
                       <Text
                         className="font-semibold mt-[28px] text-bluegray_300 text-left tracking-ls030000001192092896 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
@@ -657,8 +651,8 @@ const OverviewPage = () => {
                       </Text>
                       <Img
                         src="images/img_dividerline.svg"
-                        className="h-[1px] mt-[24px] object-cover w-[auto]"
-                        alt="dividerline Five"
+                        className="h-[1px] object-cover w-[auto]"
+                        alt="dividerline Three"
                       />
                       <Text
                         className="font-semibold mt-[29px] text-bluegray_300 text-left tracking-ls030000001192092896 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
@@ -676,8 +670,8 @@ const OverviewPage = () => {
                       </Text>
                       <Img
                         src="images/img_dividerline.svg"
-                        className="h-[1px] mt-[24px] object-cover w-[auto]"
-                        alt="dividerline Six"
+                        className="h-[1px] object-cover w-[auto]"
+                        alt="dividerline Three"
                       />
                       <Text
                         className="font-semibold mt-[27px] text-bluegray_300 text-left tracking-ls030000001192092896 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
