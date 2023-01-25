@@ -31,7 +31,7 @@ const Button = ({
     <button
       className={`${className} ${shapes[shape] || ""} ${
         variants[variant] || ""
-      } ${sizes[size] || ""} `}
+      } ${sizes[size] || ""} hover:bg-violet-600`}
       {...restProps}
     >
       {!!leftIcon && leftIcon}

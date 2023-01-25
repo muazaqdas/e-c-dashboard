@@ -1,5 +1,5 @@
 import React from "react";
-import CustomersDetailswithPr from "pages/CustomersDetailswithPr";
+import CustomersDetailswithPr from "pages/CustomersProductDetails";
 import Orders from "pages/Orders";
 import Overview from "pages/Overview";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

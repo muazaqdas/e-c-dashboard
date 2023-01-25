@@ -4,159 +4,18 @@ import {
   Button,
   Img,
   Text,
-  Line,
   Stack,
   List,
   Radio,
   CheckBox,
 } from "components";
+import { Sidebar } from "components/Sidebar";
 
 const OverviewPage = () => {
   return (
     <>
       <div className="bg-gray_800 flex md:flex-col sm:flex-col flex-row font-mulish md:gap-[20px] sm:gap-[20px] items-start mx-[auto] w-[100%]">
-        <aside className="md:hidden sm:hidden md:pl-[20px] sm:pl-[20px] md:pr-[20px] sm:pr-[20px] w-[18%]">
-          <div className="flex flex-col items-center justify-start mt-[37px] w-[100%]">
-            <div className="flex flex-col gap-[59px] justify-start w-[100%]">
-              <div className="flex flex-row gap-[12px] items-center justify-start md:ml-[0] sm:ml-[0] ml-[32px] md:w-[100%] sm:w-[100%] w-[42%]">
-                <Button
-                  className="flex h-[32px] items-center justify-center rounded-radius50 w-[32px]"
-                  size="smIcn"
-                  variant="icbFillIndigoA700"
-                >
-                  <Img src="images/img_logo.png" className="" alt="logo" />
-                </Button>
-                <Text
-                  className="text-bluegray_300_99 text-left tracking-ls04000000059604645 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
-                  as="h3"
-                  variant="h3"
-                >
-                  Erthoo
-                </Text>
-              </div>
-              <div className="flex flex-col items-center justify-start w-[100%]">
-                <div className="bg-bluegray_300_61 flex flex-row items-center justify-start pr-[110px] sm:pr-[20px] md:pr-[40px] w-[100%]">
-                  <Line className="bg-indigo_50 h-[56px] w-[3px]" />
-                  <Img
-                    src="images/img_iconsidebar.svg"
-                    className="h-[16px] ml-[29px] object-cover w-[16px]"
-                    alt="iconsidebar"
-                  />
-                  <Text
-                    className="font-normal ml-[24px] not-italic text-indigo_50 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
-                    as="h4"
-                    variant="h4"
-                  >
-                    Overview
-                  </Text>
-                </div>
-                <div className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]">
-                  <Img
-                    src="images/img_computer.svg"
-                    className="h-[16px] object-cover w-[16px]"
-                    alt="computer"
-                  />
-                  <Text
-                    className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                    as="h4"
-                    variant="h4"
-                  >
-                    Oders
-                  </Text>
-                </div>
-                <div className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]">
-                  <Img
-                    src="images/img_lightbulb.svg"
-                    className="h-[16px] object-cover w-[16px]"
-                    alt="lightbulb"
-                  />
-                  <Text
-                    className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                    as="h4"
-                    variant="h4"
-                  >
-                    Ideas
-                  </Text>
-                </div>
-                <div className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]">
-                  <Img
-                    src="images/img_user.svg"
-                    className="h-[16px] object-cover w-[16px]"
-                    alt="user"
-                  />
-                  <Text
-                    className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                    as="h4"
-                    variant="h4"
-                  >
-                    Contacts
-                  </Text>
-                </div>
-                <div className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]">
-                  <Img
-                    src="images/img_airplane.svg"
-                    className="h-[16px] object-cover w-[16px]"
-                    alt="airplane"
-                  />
-                  <Text
-                    className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                    as="h4"
-                    variant="h4"
-                  >
-                    Agents
-                  </Text>
-                </div>
-                <div className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]">
-                  <Img
-                    src="images/img_computer_bluegray_300.svg"
-                    className="h-[16px] object-cover w-[16px]"
-                    alt="computer One"
-                  />
-                  <Text
-                    className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                    as="h4"
-                    variant="h4"
-                  >
-                    Articles
-                  </Text>
-                </div>
-                <Img
-                  src="images/img_dividerline.svg"
-                  className="h-[1px] mt-[16px] object-cover w-[auto]"
-                  alt="dividerline"
-                />
-                <div className="flex flex-row gap-[24px] items-center justify-start mt-[16px] p-[18px] w-[100%]">
-                  <Img
-                    src="images/img_settings.svg"
-                    className="h-[16px] object-cover w-[16px]"
-                    alt="settings"
-                  />
-                  <Text
-                    className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                    as="h4"
-                    variant="h4"
-                  >
-                    Settings
-                  </Text>
-                </div>
-                <div className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]">
-                  <Img
-                    src="images/img_settings_bluegray_300.svg"
-                    className="h-[16px] object-cover w-[16px]"
-                    alt="settings One"
-                  />
-                  <Text
-                    className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                    as="h4"
-                    variant="h4"
-                  >
-                    Subscription
-                  </Text>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
+      <Sidebar/>
         <div className="bg-gray_50 flex flex-col items-center justify-start p-[30px] md:pl-[20px] sm:pl-[20px] md:pr-[20px] sm:pr-[20px] sm:px-[20px] md:w-[100%] sm:w-[100%] w-[83%]">
           <header className="flex items-center justify-right w-[100%]">
             <div className="flex md:flex-col flex-row md:gap-[20px] items-center w-[100%]">

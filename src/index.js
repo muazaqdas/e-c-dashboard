@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/color.css";
 import "./styles/font.css";
 import ReactDOM from "react-dom";
-import CustomersDetailswithPr from "pages/CustomersDetailswithPr";
+import CustomersDetailswithPr from "pages/CustomersProductDetails";
 import Orders from "pages/Orders";
 import Overview from "pages/Overview";
 import "./styles/index.css";
