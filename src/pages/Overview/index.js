@@ -104,11 +104,7 @@ const OverviewPage = () => {
                   >
                     16
                   </Text>
-                  <Img
-                    src="images/img_volume.svg"
-                    className="h-[16px] mt-[42px] object-cover w-[16px]"
-                    alt="volume"
-                  />
+                  
                 </div>
               </div>
             </Stack>

@@ -3,6 +3,7 @@ import { Img } from "components/Img";
 import { Text } from "components/Text";
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
+import colors from "tailwindcss/colors";
 
 const sidebarOptions = [
   {
@@ -66,10 +67,10 @@ export const Sidebar = () => {
                 onMouseLeave={(e)=>{setActive(-1)}}
                 onClick={(e)=>{setActive(i)}}
                 style={{
-                    backgroundColor:sideBtnActive===i?"#9FA2B4":"",
-                    opacity:sideBtnActive===i?"0.08":"",
-                    borderLeft:sideBtnActive===i?"15px solid #DDE2FF":"",
-                    zIndex:"1"
+                    backgroundColor:sideBtnActive===i?"rgb(62,64,73)":"rgb(54,55,64)",
+                    borderLeft:sideBtnActive===i?"8px solid #DDE2FF":"",
+                    zIndex:"2",
+                    color:sideBtnActive==i?"rgba(225,225, 255, 1)":"grey"
                 }}
                   to={item.link}
                   className="flex flex-row gap-[24px] items-center justify-start px-[24px] py-[18px] w-[100%]"
@@ -80,7 +81,7 @@ export const Sidebar = () => {
                     alt="iconsidebar"
                   />
                   <Text
-                    className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
+                    className="flex-grow font-normal not-italic text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
                     as="h4"
                     variant="h4"
                   >
@@ -208,7 +209,7 @@ export const Sidebar = () => {
                 alt="settings"
               />
               <Text
-                className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
+                className="flex-grow font-normal not-italic text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
                 as="h4"
                 variant="h4"
               >
@@ -225,7 +226,7 @@ export const Sidebar = () => {
                 alt="settings One"
               />
               <Text
-                className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
+                className="flex-grow font-normal not-italic text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
                 as="h4"
                 variant="h4"
               >
