@@ -97,7 +97,7 @@ const AdminLogin = () => {
             />
           </div>
           <div>
-            <button
+            <Link to={"/overview"}><button
               className="flex w-full mt-4 mb-3 justify-center"
               style={{
                 color: "#fff",
@@ -112,6 +112,7 @@ const AdminLogin = () => {
             >
               Log In
             </button>
+          </Link>
           </div>
         </div>
         <div className="flex gap-3 justify-center">

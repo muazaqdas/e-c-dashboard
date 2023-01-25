@@ -3,7 +3,6 @@ import { Img } from "components/Img";
 import { Text } from "components/Text";
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
-import colors from "tailwindcss/colors";
 
 const sidebarOptions = [
   {
@@ -37,7 +36,21 @@ const sidebarOptions = [
     image: "images/img_computer_bluegray_300.svg",
   },
 ];
+const sidebarMoreOptions = [
+  {
+    title: "Setting",
+    link: "/settings",
+    image: "images/img_settings.svg",
+  },
+  {
+    title: "Subscription",
+    link: "/subscription",
+    image: "images/img_settings_bluegray_300.svg",
+  },
+
+];
 export const Sidebar = () => {
+    const [BtnActive,setBtn]=useState(-1);
     const [sideBtnActive,setActive]=useState(-1);
   return (
     <div className="md:hidden sm:hidden md:pl-[20px] sm:pl-[20px] md:pr-[20px] sm:pr-[20px] w-[250px]">
@@ -70,7 +83,7 @@ export const Sidebar = () => {
                     backgroundColor:sideBtnActive===i?"rgb(62,64,73)":"rgb(54,55,64)",
                     borderLeft:sideBtnActive===i?"8px solid #DDE2FF":"",
                     zIndex:"2",
-                    color:sideBtnActive==i?"rgba(225,225, 255, 1)":"grey"
+                    color:sideBtnActive===i?"rgba(225,225, 255, 1)":"grey"
                 }}
                   to={item.link}
                   className="flex flex-row gap-[24px] items-center justify-start px-[24px] py-[18px] w-[100%]"
@@ -90,116 +103,44 @@ export const Sidebar = () => {
                 </Link>
               );
             })}
-            {/* <Link
-              to="/overview"
-              className="flex flex-row gap-[24px] items-center justify-start px-[24px] py-[18px] w-[100%]"
-            >
-              <Img
-                src="images/img_iconsidebar_bluegray_300.svg"
-                className="h-[16px] object-cover w-[16px]"
-                alt="iconsidebar"
-              />
-              <Text
-                className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                as="h4"
-                variant="h4"
-              >
-                Overview
-              </Text>
-            </Link>
-            <Link
-              to="/Orders"
-              className="bg-bluegray_300_61 flex flex-row items-center justify-start pr-[137px] sm:pr-[20px] md:pr-[40px] w-[100%]"
-            >
-              <Line className="bg-indigo_100 h-[56px] w-[3px]" />
-              <Img
-                src="images/img_television.svg"
-                className="h-[16px] ml-[29px] object-cover w-[16px]"
-                alt="television"
-              />
-              <Text
-                className="font-normal ml-[24px] not-italic text-indigo_50 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
-                as="h4"
-                variant="h4"
-              >
-                Orders
-              </Text>
-            </Link>
-            <Link
-              to="/ideas"
-              className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]"
-            >
-              <Img
-                src="images/img_lightbulb.svg"
-                className="h-[16px] object-cover w-[16px]"
-                alt="lightbulb"
-              />
-              <Text
-                className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                as="h4"
-                variant="h4"
-              >
-                Ideas
-              </Text>
-            </Link>
-            <Link
-              to="/contacts"
-              className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]"
-            >
-              <Img
-                src="images/img_user.svg"
-                className="h-[16px] object-cover w-[16px]"
-                alt="user"
-              />
-              <Text
-                className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                as="h4"
-                variant="h4"
-              >
-                Contacts
-              </Text>
-            </Link>
-            <Link
-              to="/agents"
-              className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]"
-            >
-              <Img
-                src="images/img_airplane.svg "
-                className="h-[16px] object-cover w-[16px]"
-                alt="airplane"
-              />
-              <Text
-                className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                as="h4"
-                variant="h4"
-              >
-                Agents
-              </Text>
-            </Link>
-            <Link
-              to="/articles"
-              className="flex flex-row gap-[24px] items-center justify-start p-[18px] w-[100%]"
-            >
-              <Img
-                src="images/img_computer_bluegray_300.svg "
-                className="h-[16px] object-cover w-[16px]"
-                alt="computer"
-              />
-              <Text
-                className="flex-grow font-normal not-italic text-bluegray_301 text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
-                as="h4"
-                variant="h4"
-              >
-                Articles
-              </Text>
-            </Link> */}
-
             <Img
               src="images/img_dividerline.svg"
               className="h-[1px] mt-[16px] object-cover w-[auto]"
               alt="dividerline"
             />
-            <Link
+            {sidebarMoreOptions.map((item, i) => {
+              return (
+                <Link
+                onMouseEnter={(e)=>{setBtn(i)}}
+                onMouseLeave={(e)=>{setBtn(-1)}}
+                onClick={(e)=>{setBtn(i)}}
+                style={{
+                    backgroundColor:BtnActive===i?"rgb(62,64,73)":"rgb(54,55,64)",
+                    borderLeft:BtnActive===i?"8px solid #DDE2FF":"",
+                    zIndex:"2",
+                    color:BtnActive===i?"rgba(225,225, 255, 1)":"grey"
+                }}
+                  to={item.link}
+                  className="flex flex-row gap-[24px] items-center justify-start px-[24px] py-[18px] w-[100%]"
+                >
+                  <Img
+                    src={item.image}
+                    className="h-[16px] object-cover w-[16px]"
+                    alt="iconsidebar"
+                  />
+                  <Text
+                    className="flex-grow font-normal not-italic text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
+                    as="h4"
+                    variant="h4"
+                  >
+                   {item.title}
+                  </Text>
+                </Link>
+              );
+            })}
+
+            
+            {/* <Link
               to="/settings"
               className="flex flex-row gap-[24px] items-center justify-start mt-[16px] p-[18px] w-[100%]"
             >
@@ -209,7 +150,7 @@ export const Sidebar = () => {
                 alt="settings"
               />
               <Text
-                className="flex-grow font-normal not-italic text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
+                className="flex-grow text-bluegray_300_99 font-normal not-italic text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
                 as="h4"
                 variant="h4"
               >
@@ -226,13 +167,13 @@ export const Sidebar = () => {
                 alt="settings One"
               />
               <Text
-                className="flex-grow font-normal not-italic text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
+                className="flex-grow text-bluegray_300_99 font-normal not-italic text-left tracking-ls020000000298023224 md:tracking-ls1 sm:tracking-ls1"
                 as="h4"
                 variant="h4"
               >
                 Subscription
               </Text>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
